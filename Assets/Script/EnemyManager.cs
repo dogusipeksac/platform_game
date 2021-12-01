@@ -64,7 +64,8 @@ public class EnemyManager : MonoBehaviour
     void amIDead(){
         if(health<=0){
             //düşmanın canı azsa yoket
-           Destroy(gameObject);
+        DataManager.Instance.EnemyKilled++;
+        Destroy(gameObject);
         }
     }
 }
